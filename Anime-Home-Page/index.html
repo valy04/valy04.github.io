@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../resources/Logo-site.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeHub</title>
+    <link rel="stylesheet" href="../Anime-Home-Page/styles.css">
+</head>
+<body>
+    <div class="container">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+          </svg></button>
+        <header>
+            <nav class="nav">
+                <ul class="nav-ul-left hh">
+                    <a href="#"><li class="nav-li-left logo"><span>Anime</span>Hub</li></a>
+                    <a href="#"><li class="nav-li-left logo" id="logo"><span>A</span>H</li></a>
+                    <a href=""><li class="nav-li-left tr-li hnl">Anime</li></a>
+                    <a href=""><li class="nav-li-left tr-li hnl">Manga</li></a>
+                    <a href=""><li class="nav-li-left tr-li hnl">Community</li></a>
+                    <a href=""><li class="nav-li-left tr-li hnl">New Episodes</li></a>
+                    <a href=""><li class="nav-li-left tr-li hnl">Blog</li></a>
+                </ul>
+                <ul class="nav-ul-right">
+                    <li class="nav-li-right">
+                        <div class="search-box">
+                            <input type="text" class="search-input" placeholder="Search..">
+                            <div class="search-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                  </svg>
+                            </div>
+                            <div class="cancel-icon hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-li-right tr-li sp"><a href="">Support</a></li>
+                    <li class="nav-li-right"><svg class="svg-notification sn1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                      </svg></li>
+                    <li class="nav-li-right hh">
+                        <div class="profile" id="dropdown-trigger">
+                            <img class="profile-wrapper" id="profile-picture">
+                            <input type="file" id="upload-input" accept="image/*">
+                            <svg id="rotate-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>
+                            <ul id="dropdown-menu">
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                    </svg><span>Profile</span></li></a>
+                                <li class="sn2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                                  </svg><span>Notification</span></li>
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+                                    <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5M13.991 3l.024.001a1.5 1.5 0 0 1 .538.143.76.76 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.5 1.5 0 0 1-.143.538.76.76 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.5 1.5 0 0 1-.538-.143.76.76 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.5 1.5 0 0 1 .143-.538.76.76 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2"/>
+                                  </svg><span>Anime List</span></li></a>
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                                    <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                                    </svg><span>Manga List</span></li></a>
+                                <li><button id="upload-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+                                  </svg>Change Avatar</button></li>
+                                  <li><button class="remove-button" id="remove-avatar-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
+                                    <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293z"/>
+                                  </svg>Remove Avatar</button></li>
+                                  <li><button id="languages"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                                    <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                                    <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
+                                    <span id="language-text">Japan</span></button></li>
+                                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                                    <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg>
+                                    <span>Premium</span></li></a>
+                                <li><button id="sing-out">Sing out</button></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-li-right hh">
+                        <label class="menu" for="toggleMenu">
+                            <input type="checkbox" id="toggleMenu" onclick="toggleMenu()">
+                            <svg viewBox="0 0 32 32" class="menu-svg">
+                                <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                                <path class="line" d="M7 16 27 16"></path>
+                            </svg>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-content" id="menuContent">
+                <div class="content-list">
+                    <a href="#"><li class="br-bottom">Home</li></a>
+                    <a href="#Anime List"><li>Anime</li></a>
+                    <a href="#Movies"><li>Manga</li></a>
+                    <a href="#Popularly"><li>Community</li></a>
+                    <a href="#Seasonal Anime"><li>New Episodes</li></a>
+                    <a href="#Top Anime"><li class="br-bottom">Blog</li></a>
+                    <a href=""><li>Support</li></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- slider -->
+        <div class="slider">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/cyberpunk.jpg" alt="cyberpunk.jpg">
+                    <img class="bg-banner-mobile" src="../resources/cyberpunk-bgmobile.jpg" alt="cyberpunk.jpg">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/Cyberpunk_Edgerunners_logo.png" alt="Cyberpunk: Edgerunners"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">serial</li>
+                                <li class="bar">︱</li>
+                                <li>2022</li>
+                                <li class="bar">︱</li>
+                                <li>18+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">10 ep <span class="text-transparent">sss</span></li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            David Martinez, un adolescent din Night City, visează să ajungă la conducerea Arasaka. După un incident tragic, își instalează o proteză specială pentru răzbunare. Exmatriculat din academie, se aliază cu hoața de date Lucy Kushinada, intrând în lumea criminală a orașului.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Action</li>
+                            <li class="circle">●</li>
+                            <li>Sci-Fi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/AOT-BANNER.jpg" alt="Attack on Titan">
+                    <img class="bg-banner-mobile" src="../resources/aot-mobile2.jpg" alt="Attack on Titan">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/AOT-logo.png" alt="AOT"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">serial</li>
+                                <li class="bar">︱</li>
+                                <li>2022</li>
+                                <li class="bar">︱</li>
+                                <li>18+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">10 ep <span class="text-transparent">sss</span></li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Cu secole în urmă, omenirea aproape căzuse sub asaltul titaniilor - creaturi brute și fără milă care devorau oameni. Într-un singur oraș supraviețuitor locuiește tânărul Eren, hotărât să se răzbune pentru moartea mamei sale, jurând să-i distrugă pe toți titani.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Action</li>
+                            <li class="circle">●</li>
+                            <li>Drama</li>
+                            <li class="circle">●</li>
+                            <li>Gore</li>
+                            <li class="circle">●</li>
+                            <li>Shounen</li>
+                            <li class="circle">●</li>
+                            <li>Military</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/Your Name. bg.jpg" alt="Your Name.">
+                    <img class="bg-banner-mobile" src="../resources/Your Name. bg-mobile.jpg" alt="Your Name.">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/your name.logo.png" alt="Your Name."></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">movie</li>
+                                <li class="bar">︱</li>
+                                <li>2016</li>
+                                <li class="bar">︱</li>
+                                <li>13+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">1 hr. 46 min.</li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Mitsuha Miyamizu, o fată din mediul rural, visează la viața de la Tokyo, în timp ce Taki Tachibana, un băiat de oraș, visează la arhitectură. Își schimbă corpurile, căutându-se unul pe altul, modificând destinele în „Kimi no Na wa”.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Drama</li>
+                            <li class="circle">●</li>
+                            <li>Romantic</li>
+                            <li class="circle">●</li>
+                            <li>School</li>
+                            <li class="circle">●</li>
+                            <li>Supranatural</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/Steins;Gate-bg-pc.jpg" alt="Steins;Gate">
+                    <img class="bg-banner-mobile" src="../resources/Steins;Gate-bg-mobile.jpg" alt="Steins;Gate">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/Steins;Gate.png" alt="Steins;Gate"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">serial</li>
+                                <li class="bar">︱</li>
+                                <li>2011</li>
+                                <li class="bar">︱</li>
+                                <li>13+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">24 ep</li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Okabe, Mayuri și Daru, echipa „Laboratorului Dispozitivelor de Ultimă Generație”, descoperă că pot trimite mesaje în trecut folosind un cuptor cu microunde și un telefon mobil. Dar când experimentele lor scapă de sub control, consecințele ar putea fi devastatoare.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Time Travel</li>
+                            <li class="circle">●</li>
+                            <li>Sci-Fi</li>
+                            <li class="circle">●</li>
+                            <li>Suspense</li>
+                            <li class="circle">●</li>
+                            <li>Drama</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/Demon Slayer-bgpc.jpg" alt="Demon Slayer">
+                    <img class="bg-banner-mobile" src="../resources/Demon Slayer-bg-mobile.jpg" alt="Demon Slayer">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/Demon Slayer-Logo.png" alt="Demon Slayer"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">serial</li>
+                                <li class="bar">︱</li>
+                                <li>2019</li>
+                                <li class="bar">︱</li>
+                                <li>15+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">26 ep <span class="text-transparent">ssss</span></li>
+                            </ul>   
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Tanjirou și sora lui Nezuko sunt singurii supraviețuitori ai unui atac demoniac care le-a ucis familia. Nezuko, transformată în demon, păstrează trăsături umane. Tanjirou se angajează să-și salveze sora și să lupte împotriva demonilor, pornind într-o aventură periculoasă pentru a-și restabili familia și a-și vindeca sora.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Action</li>
+                            <li class="circle">●</li>
+                            <li>Shounen</li>
+                            <li class="circle">●</li>
+                            <li>Fantasy</li>
+                            <li class="circle">●</li>
+                            <li>Award Winning</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/Kaguya-sama Love is War-bg-pc.jpg" alt="Kaguya-sama Love is War">
+                    <img class="bg-banner-mobile" src="../resources/Kaguya-sama Love is War-bg-mobile.jpg" alt="Kaguya-sama Love is War">
+                    <div class="content">
+                        <a href="">
+                        <img class="lg-name" src="../resources/Kaguya-sama Love is War-logo.png" alt="Kaguya-sama Love is War"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">serial</li>
+                                <li class="bar">︱</li>
+                                <li>2019</li>
+                                <li class="bar">︱</li>
+                                <li>13+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">12 ep</li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Miyuki și Kaguya, cei mai străluciți elevi ai Academiei Shuchiin, se prind într-un joc subtil de a-și recunoaște sentimentele unul pentru celălalt, încercând să nu-și compromită mândria sau statutul lor de lideri de elită.
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Comedy</li>
+                            <li class="circle">●</li>
+                            <li>Psihologic</li>
+                            <li class="circle">●</li>
+                            <li>Romance</li>
+                            <li class="circle">●</li>
+                            <li>School</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item">
+                    <img class="bg-banner-largescreen" src="../resources/Weathering With You-bgpc.jpg" alt="Weathering With You">
+                    <img class="bg-banner-mobile" src="../resources/Weathering With You-bg-mobile.jpg" alt="Weathering With You">
+                    <div class="content">
+                        <a href="">
+                            <img class="lg-name" src="../resources/Weathering With You-lg.png" alt="Weathering With You"></a>
+                        <div class="dt1 dt-animation">
+                            <ul>
+                                <li class="type">movie</li>
+                                <li class="bar">︱</li>
+                                <li>2019</li>
+                                <li class="bar">︱</li>
+                                <li>13+</li>
+                                <li class="bar">︱</li>
+                                <li class="ep">1 hr. 52 min.</li>
+                            </ul>
+                        </div>
+                        <p class="dt2 dt-animation">
+                            Tokyo a fost asaltat de o ploaie ce pare că nu se mai oprește, însă există niște fete speciale care pot să oprească ploaia și să readucă soarele pe cerul albastru, dar cu ce preț? S-o merita oare?
+                        </p>
+                        <ul class="genres dt-animation">
+                            <li>Fantasy</li>
+                            <li class="circle">●</li>
+                            <li>Romance</li>
+                            <li class="circle">●</li>
+                            <li>Drama</li>
+                            <li class="circle">●</li>
+                            <li>Award Winning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="prev-button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+            </svg></button>
+        <button id="next-button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+            </svg></button>
+            <div class="btm-shadow"></div>
+        <div class="section-articles">
+            <div class="header-tittle">
+               <a href=""><h1>Seasonal Anime<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg></h1></a>
+            </div>
+            <div class="articles-wrp">
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kaii to Otome to Kamikakushi.jpe" alt="Kaii to Otome to Kamikakushi">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kaii to Otome to Kamikakushi</p>
+                        <p class="title-serie-en">Mysterious Disappearances</p>
+                        <p class="genres-article">Mystery, Supernatural</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kimetsu no Yaiba Hashira Geiko-hen.jpg" alt="Kimetsu no Yaiba: Hashira Geiko-hen">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kimetsu no Yaiba: Hashira Geiko-hen</p>
+                        <p class="title-serie-en">Demon Slayer: Kimetsu no Yaiba Hashira Training Arc</p>
+                        <p class="genres-article">Action, Fantasy, Historical, Shounen</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Tensei shitara Slime Datta Ken 3rd Season.jpe" alt="Tensei shitara Slime Datta Ken 3rd Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tensei shitara Slime Datta Ken 3rd Season</p>
+                        <p class="title-serie-en">That Time I Got Reincarnated as a Slime Season 3</p>
+                        <p class="genres-article">Adventure, Comedy, Action, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Mushoku Tensei II Isekai Ittara Honki Dasu Part 2.jpe" alt="Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2</p>
+                        <p class="title-serie-en">Mushoku Tensei: Jobless Reincarnation Season 2 Part 2</p>
+                        <p class="genres-article">Adventure, Drama, Fantasy, Ecchi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Boku no Hero Academia 7th Season.jpg" alt="Boku no Hero Academia 7th Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Boku no Hero Academia 7th Season</p>
+                        <p class="title-serie-en">My Hero Academia Season 7</p>
+                        <p class="genres-article">School, Action, Super Power</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kaijuu 8-gou.jpe" alt="Kaijuu 8-gou">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kaijuu 8-gou</p>
+                        <p class="title-serie-en">Kaiju No. 8</p>
+                        <p class="genres-article">Action, Sci-Fi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Ookami to Koushinryou Merchant Meets the Wise Wolf.jpe" alt="Ookami to Koushinryou: Merchant Meets the Wise Wolf">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Ookami to Koushinryou: Merchant Meets the Wise Wolf</p>
+                        <p class="title-serie-en">Spice and Wolf: Merchant Meets the Wise Wolf</p>
+                        <p class="genres-article">Adventure, Drama, Fantasy, Romance</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Maou Gakuin no Futekigousha II Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou Part 2.jpe" alt="Maou Gakuin no Futekigousha II: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou Part 2">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Maou Gakuin no Futekigousha II: Shijou Saikyou no Maou no Shiso, Tensei shite Shison-tachi no Gakkou e Kayou Part 2</p>
+                        <p class="title-serie-en">The Misfit of Demon King Academy Ⅱ</p>
+                        <p class="genres-article">Action, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Wind Breaker.jpe" alt="Wind Breaker">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Wind Breaker</p>
+                        <p class="title-serie-en">Wind Breaker</p>
+                        <p class="genres-article">Action</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Mahouka Koukou no Rettousei 3rd Season.jpe" alt="Mahouka Koukou no Rettousei 3rd Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Mahouka Koukou no Rettousei 3rd Season</p>
+                        <p class="title-serie-en">The Irregular at Magic High School Season 3</p>
+                        <p class="genres-article">Action, Fantasy, Romance, Sci-Fi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kono Subarashii Sekai ni Shukufuku wo! 3.jpg" alt="Kono Subarashii Sekai ni Shukufuku wo! 3">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kono Subarashii Sekai ni Shukufuku wo! 3</p>
+                        <p class="title-serie-en">KonoSuba: God's Blessing on This Wonderful World! 3</p>
+                        <p class="genres-article">Adventure, Comedy, Fantasy, Isekai, Parody</p>
+                    </div>
+                </article></a>
+                <button class="prev-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+                <button class="next-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+            </div>
+        </div>
+        <div class="section-articles">
+            <div class="header-tittle">
+               <a href=""><h1>Most Popular<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg></h1></a>
+            </div>
+            <div class="articles-wrp">
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Solo Leveling.jpe" alt="Solo Leveling">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Ore dake Level Up na Ken</p>
+                        <p class="title-serie-en">Solo Leveling</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Mashle Shinkakusha Kouho Senbatsu Shiken-hen.jpe" alt="Mashle: Shinkakusha Kouho Senbatsu Shiken-hen">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Mashle: Shinkakusha Kouho Senbatsu Shiken-hen</p>
+                        <p class="title-serie-en">Mashle: Magic and Muscles - The Divine Visionary Candidate Exam Arc</p>
+                        <p class="genres-article">Action, Comedy, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Tsuki ga Michibiku Isekai Douchuu 2nd Season.jpe" alt="Tsuki ga Michibiku Isekai Douchuu 2nd Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tsuki ga Michibiku Isekai Douchuu 2nd Season</p>
+                        <p class="title-serie-en">Tsukimichi: Moonlit Fantasy Season 2</p>
+                        <p class="genres-article">Action, Adventure, Comedy, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Chiyu Mahou no Machigatta Tsukaikata.jpe" alt="Chiyu Mahou no Machigatta Tsukaikata">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Chiyu Mahou no Machigatta Tsukaikata</p>
+                        <p class="title-serie-en">The Wrong Way to Use Healing Magic</p>
+                        <p class="genres-article">Action, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Sousou no Frieren.jpe" alt="Sousou no Frieren">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Sousou no Frieren</p>
+                        <p class="title-serie-en">Frieren: Beyond Journey's End</p>
+                        <p class="genres-article">Adventure, Drama, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Shangri-La Frontier Kusoge Hunter, Kamige ni Idoman to su.jpe" alt="Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</p>
+                        <p class="title-serie-en">Shangri-La Frontier</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/One Piece.jpe" alt="One Piece">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">One Piece</p>
+                        <p class="title-serie-en">One Piece</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kusuriya no Hitorigoto.jpe" alt="Kusuriya no Hitorigoto">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kusuriya no Hitorigoto</p>
+                        <p class="title-serie-en">The Apothecary Diaries</p>
+                        <p class="genres-article">Drama, Mystery</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Yubisaki to Renren.jpe" alt="Yubisaki to Renren">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Yubisaki to Renren</p>
+                        <p class="title-serie-en">A Sign of Affection</p>
+                        <p class="genres-article">Romance</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Kaijuu 8-gou.jpe" alt="Kaijuu 8-gou">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kaijuu 8-gou</p>
+                        <p class="title-serie-en">Kaiju No. 8</p>
+                        <p class="genres-article">Action, Sci-Fi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru.jpe" alt="Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru</p>
+                        <p class="title-serie-en">7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!</p>
+                        <p class="genres-article">Fantasy, Romance</p>
+                    </div>
+                </article></a>
+                <button class="prev-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+                <button class="next-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+            </div>
+        </div>
+
+        <div class="section-articles">
+            <div class="header-tittle">
+               <a href=""><h1>New Episodes<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg></h1></a>
+            </div>
+            <div class="articles-wrp">
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <img src="../resources/Solo Leveling.jpe" alt="Solo Leveling">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Solo Leveling</p>
+                        <p class="title-serie-en">Solo Leveling</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+            </div>
+        </div>
+
+        <div class="section-articles">
+            <div class="header-tittle">
+               <a href=""><h1>Just Add on AnimeHub<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg></h1></a>
+            </div>
+            <div class="articles-wrp">
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Wind Breaker.jpe" alt="Wind Breaker">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Wind Breaker</p>
+                        <p class="title-serie-en">Wind Breaker</p>
+                        <p class="genres-article">Action</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru.jpe" alt="Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Loop 7-kaime no Akuyaku Reijou wa, Moto Tekikoku de Jiyuu Kimama na Hanayome Seikatsu wo Mankitsu suru</p>
+                        <p class="title-serie-en">7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!</p>
+                        <p class="genres-article">Fantasy, Romance</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Yubisaki to Renren.jpe" alt="Yubisaki to Renren">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Yubisaki to Renren</p>
+                        <p class="title-serie-en">A Sign of Affection</p>
+                        <p class="genres-article">Romance</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Kaijuu 8-gou.jpe" alt="Kaijuu 8-gou">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kaijuu 8-gou</p>
+                        <p class="title-serie-en">Kaiju No. 8</p>
+                        <p class="genres-article">Action, Sci-Fi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Boku no Hero Academia 7th Season.jpg" alt="Boku no Hero Academia 7th Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Boku no Hero Academia 7th Season</p>
+                        <p class="title-serie-en">My Hero Academia Season 7</p>
+                        <p class="genres-article">School, Action, Super Power</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Sousou no Frieren.jpe" alt="Sousou no Frieren">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Sousou no Frieren</p>
+                        <p class="title-serie-en">Frieren: Beyond Journey's End</p>
+                        <p class="genres-article">Adventure, Drama, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Kaii to Otome to Kamikakushi.jpe" alt="Kaii to Otome to Kamikakushi">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kaii to Otome to Kamikakushi</p>
+                        <p class="title-serie-en">Mysterious Disappearances</p>
+                        <p class="genres-article">Mystery, Supernatural</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Kimetsu no Yaiba Hashira Geiko-hen.jpg" alt="Kimetsu no Yaiba: Hashira Geiko-hen">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kimetsu no Yaiba: Hashira Geiko-hen</p>
+                        <p class="title-serie-en">Demon Slayer: Kimetsu no Yaiba Hashira Training Arc</p>
+                        <p class="genres-article">Action, Fantasy, Historical, Shounen</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Tensei shitara Slime Datta Ken 3rd Season.jpe" alt="Tensei shitara Slime Datta Ken 3rd Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tensei shitara Slime Datta Ken 3rd Season</p>
+                        <p class="title-serie-en">That Time I Got Reincarnated as a Slime Season 3</p>
+                        <p class="genres-article">Adventure, Comedy, Action, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Tsuki ga Michibiku Isekai Douchuu 2nd Season.jpe" alt="Tsuki ga Michibiku Isekai Douchuu 2nd Season">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tsuki ga Michibiku Isekai Douchuu 2nd Season</p>
+                        <p class="title-serie-en">Tsukimichi: Moonlit Fantasy Season 2</p>
+                        <p class="genres-article">Action, Adventure, Comedy, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Chiyu Mahou no Machigatta Tsukaikata.jpe" alt="Chiyu Mahou no Machigatta Tsukaikata">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Chiyu Mahou no Machigatta Tsukaikata</p>
+                        <p class="title-serie-en">The Wrong Way to Use Healing Magic</p>
+                        <p class="genres-article">Action, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Shangri-La Frontier Kusoge Hunter, Kamige ni Idoman to su.jpe" alt="Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</p>
+                        <p class="title-serie-en">Shangri-La Frontier</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/One Piece.jpe" alt="One Piece">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">One Piece</p>
+                        <p class="title-serie-en">One Piece</p>
+                        <p class="genres-article">Action, Adventure, Fantasy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Kusuriya no Hitorigoto.jpe" alt="Kusuriya no Hitorigoto">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Kusuriya no Hitorigoto</p>
+                        <p class="title-serie-en">The Apothecary Diaries</p>
+                        <p class="genres-article">Drama, Mystery</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Mushoku Tensei II Isekai Ittara Honki Dasu Part 2.jpe" alt="Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2</p>
+                        <p class="title-serie-en">Mushoku Tensei: Jobless Reincarnation Season 2 Part 2</p>
+                        <p class="genres-article">Adventure, Drama, Fantasy, Ecchi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Anime</span>
+                        <img src="../resources/Mashle Shinkakusha Kouho Senbatsu Shiken-hen.jpe" alt="Mashle: Shinkakusha Kouho Senbatsu Shiken-hen">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Mashle: Shinkakusha Kouho Senbatsu Shiken-hen</p>
+                        <p class="title-serie-en">Mashle: Magic and Muscles - The Divine Visionary Candidate Exam Arc</p>
+                        <p class="genres-article">Action, Comedy, Fantasy</p>
+                    </div>
+                </article></a>
+                <button class="prev-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+                <button class="next-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+            </div>
+        </div>
+        <div class="section-articles bg-comic">
+            <div class="header-tittle">
+               <a href=""><h1>Read<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+              </svg></h1></a>
+            </div>
+            <div class="articles-wrp">
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Light Novel</span>
+                        <img src="../resources/High School DxD-light novel.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">High School DxD</p>
+                        <p class="title-serie-en">High School DxD</p>
+                        <p class="genres-article">Comedy, Fantasy, Romance, Supernatural, Ecchi</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manhwa</span>
+                        <img src="../resources/Wind Breaker-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Wind Breaker</p>
+                        <p class="title-serie-en">Wind Breaker</p>
+                        <p class="genres-article">Action, Drama, Sports</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/Tokyo Ghoul-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tokyo Ghoul</p>
+                        <p class="title-serie-en">Tokyo Ghoul</p>
+                        <p class="genres-article">Action, Fantasy, Horror</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/One Punch-Man-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">One Punch-Man</p>
+                        <p class="title-serie-en">One-Punch Man</p>
+                        <p class="genres-article">Action, Comedy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/Vagabond-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Vagabond</p>
+                        <p class="title-serie-en">Vagabond</p>
+                        <p class="genres-article">Action, Adventure, Award Winning</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Light Novel</span>
+                        <img src="../resources/Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e-light novel.jpeg" alt="Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e</p>
+                        <p class="title-serie-en">Classroom of the Elite</p>
+                        <p class="genres-article">Psychological, School</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/Akatsuki no Yona-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Akatsuki no Yona</p>
+                        <p class="title-serie-en">Yona of the Dawn</p>
+                        <p class="genres-article">Action, Adventure, Fantasy, Romance</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/Grand Blue-manga.jpg" alt="Grand Blue">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Grand Blue</p>
+                        <p class="title-serie-en">Grand Blue Dreaming</p>
+                        <p class="genres-article">Comedy</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manga</span>
+                        <img src="../resources/Vinland Saga-manga.webp" alt="Vinland Saga">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Vinland Saga</p>
+                        <p class="title-serie-en">Vinland Saga</p>
+                        <p class="genres-article">Action, Adventure, Award Winning, Drama</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Light Novel</span>
+                        <img src="../resources/Re Zero kara Hajimeru Isekai Seikatsu-light novel.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Re:Zero kara Hajimeru Isekai Seikatsu</p>
+                        <p class="title-serie-en">Re:ZERO -Starting Life in Another World-</p>
+                        <p class="genres-article">Drama, Fantasy, Suspense</p>
+                    </div>
+                </article></a>
+                <a href=""><article class="article">
+                    <div class="cover-article">
+                        <span class="category">Manhwa</span>
+                        <img src="../resources/Tower of God-manga.jpg" alt="Re:Zero kara Hajimeru Isekai Seikatsu">
+                    </div>
+                    <div class="title-article">
+                        <p class="title-serie-jp">Tower of God</p>
+                        <p class="title-serie-en">Tower of God</p>
+                        <p class="genres-article">Action, Adventure, Drama, Fantasy, Mystery</p>
+                    </div>
+                </article></a>
+                <button class="prev-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+                <button class="next-button-article"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve"><defs></defs>
+                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                        <path d="M 68.045 89.028 l 3.93 -4.264 c 1.129 -1.225 1.051 -3.132 -0.174 -4.261 l -37.4 -34.473 c -0.602 -0.555 -0.602 -1.505 0 -2.06 l 37.4 -34.473 c 1.225 -1.129 1.302 -3.037 0.174 -4.261 l -3.93 -4.263 c -1.129 -1.225 -3.037 -1.302 -4.261 -0.174 l -45.609 42.04 c -1.263 1.164 -1.263 3.159 0 4.323 l 45.609 42.04 C 65.008 90.331 66.916 90.253 68.045 89.028 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255, 255, 255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></g>
+                </svg></button>
+            </div>
+        </div>
+
+        <div class="section-blog-wrp">
+            <div class="section-blog">
+                <a href="" class="st"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-megaphone" viewBox="0 0 16 16">
+                    <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/>
+                  </svg><h1>AnimeHub News<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                  </svg></h1></a>
+                  <div class="content-blog">
+                    <div class="top-news">
+                        <h3>Top News</h3>
+                        <div class="flex-top-news">
+                            <a href=""><article class="article-top-news">
+                                <div class="atn-img">
+                                    <img src="../resources/Top 10 cele mai așteptate anime-uri ale sezonului de primăvară 2024.jpg" alt="img-news">
+                                </div>
+                                <div class="post-text">
+                                    <p class="title-top-news">Top 10 cele mai așteptate anime-uri ale sezonului de primăvară 2024</p>
+                                    <div class="release">
+                                        <p>Apr 25, 2024 17:44</p>
+                                    </div>
+                                    <div class="author">
+                                        <p>by AnimeHub Official</p>
+                                    </div>
+                                </div>
+                            </article></a>
+                            <a href=""><article class="article-top-news">
+                                <div class="atn-img">
+                                    <img src="../resources/Akira Toriyama, creatorul seriei Dragon Ball, a murit la vârsta de 68 de ani.png" alt="img-news">
+                                </div>
+                                <div class="post-text">
+                                    <p class="title-top-news">Akira Toriyama, creatorul seriei Dragon Ball, a murit la vârsta de 68 de ani</p>
+                                    <div class="release">
+                                        <p>Apr 25, 2024 18:12</p>
+                                    </div>
+                                    <div class="author">
+                                        <p>by AnimeHub Official</p>
+                                    </div>
+                                </div>
+                            </article></a>
+                        </div>
+                    </div>
+                    <div class="latest-news">
+                        <h3>Latest</h3>
+                        <div class="section-latest-news">
+                            <div class="left-latest-news">
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/That Time I Got Reincarnated as a Slime ISEKAI Chronicles Action-RPG Revealed for Consoles and PC.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">That Time I Got Reincarnated as a Slime ISEKAI Chronicles Action-RPG Revealed for Consoles and PC</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 18:57</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/YOASOBI Confirms Dates for New York City and Boston Concerts Powered by Crunchyroll.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">YOASOBI Confirms Dates for New York City and Boston Concerts Powered by Crunchyroll</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 18:42</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/Acro Trip TV Anime Debuts in October 2024.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">Acro Trip TV Anime Debuts in October 2024</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 18:26</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/MEGATON MUSASHI Season 1 Joins the Crunchyroll Catalog.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">MEGATON MUSASHI Season 1 Joins the Crunchyroll Catalog</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 18:01</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/Anime Studio GoHands Reveals Original Series Momentary Lily.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">Anime Studio GoHands Reveals Original Series Momentary Lily</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 17:34</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                            </div>
+                            <div class="right-latest-news">
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/My Hero Academia Girl Power UniVersus Cards Launch with Chrome Rares This May.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">My Hero Academia: Girl Power UniVersus Cards Launch with Chrome Rares This May</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 17:30</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/Promise of Wizard Smartphone Game Confirms TV Anime Plans.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">Promise of Wizard Smartphone Game Confirms TV Anime Plans</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 17:12</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/The Strongest Magician in the Demon Lord's Army was a Human TV Anime Adds 3 More Cast Members.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">The Strongest Magician in the Demon Lord's Army was a Human TV Anime Adds 3 More Cast Members</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 16:53</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/THE iDOLM@STER SHINY COLORS Celebrates 6th Anniversary with Celebration Video.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">THE iDOLM@STER SHINY COLORS Celebrates 6th Anniversary with Celebration Video</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 16:28</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                                <a href=""><article class="article-latest-news">
+                                    <div class="img-latest-news">
+                                        <img src="../resources/KONOSUBA Season 3 English Dub Reveals Cast and Crew, Release Date.webp" alt="img-news">
+                                    </div>
+                                    <div class="inf-text">
+                                        <p class="title-latest-news">KONOSUBA Season 3 English Dub Reveals Cast and Crew, Release Date</p>
+                                        <div class="release">
+                                            <p>Apr 25, 2024 16:21</p>
+                                        </div>
+                                        <div class="author">
+                                            <p>by AnimeHub Official</p>
+                                        </div>
+                                    </div>
+                                </article></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../Anime-Home-Page/script.js"></script>
+</html>
