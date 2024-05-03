@@ -672,7 +672,7 @@ header {
     user-select: none;
     font-style: italic;
     padding: 2px 5px 2px 8px;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 4px;
     top: 0;
     left: 0;
     z-index: 1;

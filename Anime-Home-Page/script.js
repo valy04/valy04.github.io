@@ -576,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     randomSeriesWrappers.forEach(function(wrapper) { // Iterăm prin fiecare wrapper
         var randomSeries = wrapper.querySelectorAll('.random-serie'); // Selectăm toate serii aleatoare din wrapper-ul curent
-        var interval = 43200000; // 12 ore
+        var interval = 60000; // 12 ore
         var storedIndex = localStorage.getItem('randomSeriesIndex');
         var lastUpdateTime = localStorage.getItem('lastUpdateTime');
         var currentIndex = storedIndex !== null ? parseInt(storedIndex) : -1;
