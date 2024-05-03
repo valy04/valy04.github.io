@@ -379,6 +379,7 @@ header {
 .section-blog-wrp {
     background-image: linear-gradient(to right top, #cc142d, #d52e2b, #dd4029, #e55126, #ec6124, #f06e21, #f47a1e, #f7861b, #f99317, #fa9f15, #faac15, #fab818);
     padding: 30px 50px;
+    margin-bottom: 50px;
 }
 
 .section-blog {
@@ -396,7 +397,7 @@ header {
 }
 
 .st {
-    max-width: 300px;
+    max-width: 310px;
 }
 
 .section-blog svg:nth-child(1) {
@@ -908,7 +909,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 0 90px;
-    margin: 0px 0 70px 0;
+    margin: 0px 0 90px 0;
 }
 
 .img-serie-random {
@@ -932,10 +933,14 @@ header {
 }
 
 .title-serie-random {
-    display: inline-block;
     color: white;
     font-size: 2.3rem;
+    display: inline-block;
     cursor: pointer;
+
+}
+
+.title-serie-random-jp, .title-serie-random-en {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -951,7 +956,7 @@ header {
 }
 
 .type-serie-radom {
-    margin: 12px 0;
+    margin: 5px 0 12px 0;
     user-select: none;
 }
 
@@ -1099,7 +1104,7 @@ header {
     }
     
     .type-serie-radom {
-        margin: 11px 0;
+        margin: 5px 0 10px 0;
     }
     
     .description-serie-random {
@@ -1339,7 +1344,7 @@ header {
     }
     
     .st {
-        max-width: 260px;
+        max-width: 270px;
     }
 
     .title-top-news {
@@ -1544,7 +1549,7 @@ header {
     }
 
     .st {
-        max-width: 230px;
+        max-width: 240px;
     }
 
     .section-blog-wrp {
@@ -1553,6 +1558,7 @@ header {
 
     .ds-rdn-flex {
         padding: 0 60px;
+        margin: -15px 0 60px 0;
     }
 
     .img-serie-random {
@@ -1664,6 +1670,7 @@ header {
     .ds-rdn-flex {
         display: block;
         padding: 0 17px;
+        margin: 10px 0 50px 0;
     }
     
     .img-serie-random {
@@ -1809,6 +1816,10 @@ header {
 
     .section-articles {
         margin-bottom: 45px;
+    }
+
+    .section-blog-wrp {
+        margin-bottom: 30px;
     }
 
     .content-blog {
@@ -2229,7 +2240,7 @@ header {
     }
 
     .st {
-        max-width: 220px;
+        max-width: 230px;
     }
 
 }
@@ -2362,9 +2373,11 @@ header {
     .genres-article {
         font-size: 0.8rem;
     }
-}
 
-@media screen and (max-width: 380px) {
+    .title-serie-random {
+        font-size: 1.5rem;
+    }
+
     .slider .list .item .content img {
         left: 17.6%;
     }
