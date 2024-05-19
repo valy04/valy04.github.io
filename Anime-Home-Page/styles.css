@@ -377,7 +377,11 @@ header {
 }
 
 .section-blog-wrp {
-    background-image: linear-gradient(to right top, #cc142d, #d52e2b, #dd4029, #e55126, #ec6124, #f06e21, #f47a1e, #f7861b, #f99317, #fa9f15, #faac15, #fab818);
+    /* background-image: linear-gradient(to right top, #cc142d, #d52e2b, #dd4029, #e55126, #ec6124, #f06e21, #f47a1e, #f7861b, #f99317, #fa9f15, #faac15, #fab818); */
+    background-image: url(../resources/bg02-copyright.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 30px 50px;
     margin-bottom: 50px;
 }
@@ -388,7 +392,7 @@ header {
     height: auto;
     margin: 0 auto;
     padding: 35px 40px 25px 40px;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.685);
 }
 
 .section-blog a {
