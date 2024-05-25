@@ -544,8 +544,8 @@ function topFunction() {
 
 const languageButton = document.getElementById('languages');
 const languageText = document.getElementById('language-text');
-const titleJP = document.querySelectorAll('.title-serie-jp, .title-serie-random-jp');
-const titleEN = document.querySelectorAll('.title-serie-en, .title-serie-random-en');
+const titleJP = document.querySelectorAll('.title-serie-jp, .title-serie-random-jp, .ch-title-jp');
+const titleEN = document.querySelectorAll('.title-serie-en, .title-serie-random-en, .ch-title-en');
 
 function switchLanguage() {
     if (languageText.textContent === 'Japan') {
