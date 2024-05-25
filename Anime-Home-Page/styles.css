@@ -64,6 +64,24 @@ header {
     z-index: 99;
 }
 
+@media screen and (min-width: 2500px) {
+    .container {
+        display: none;
+    }
+
+    .massage {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        font-size: 50px;
+        color: white;
+        font-size: 200px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.massage {display: none;}
+
 .nav {
     position: absolute;
     display: flex;
