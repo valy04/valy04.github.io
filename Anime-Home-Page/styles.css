@@ -488,6 +488,10 @@ header {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 3;
 }
 
 .release, .author {
@@ -555,6 +559,10 @@ header {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 1;
 }
 
 .inf-text {
@@ -732,6 +740,10 @@ header {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 2;
     margin-bottom: 3.5px;
     font-size: 1.15rem;
     width: 100%;
@@ -743,6 +755,10 @@ header {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 1;
     color: #a0a0a0;
     font-size: 1.05rem;
     width: 100%;
@@ -967,6 +983,10 @@ header {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 2;
 }
 
 .title-serie-random:hover {
@@ -1006,6 +1026,10 @@ header {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 3;
 }
 
 .btn-serie-random {
@@ -1118,6 +1142,10 @@ header {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    display: box;
+    box-orient: vertical;
+    line-clamp: 2;
 }
 
 .ch-title-jp:hover {
@@ -1363,6 +1391,10 @@ header {
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        box-orient: vertical;
+        line-clamp: 4;
     }
 
     .genres {
@@ -1608,6 +1640,10 @@ header {
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        box-orient: vertical;
+        line-clamp: 4;
     }
 
     .genres {
@@ -2294,6 +2330,10 @@ header {
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        box-orient: vertical;
+        line-clamp: 3;
     }
 
     .genres {
@@ -2398,6 +2438,10 @@ header {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        text-overflow: ellipsis;
+        display: box;
+        box-orient: vertical;
+        line-clamp: 2;
     }
 
     .article-latest-news {
