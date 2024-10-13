@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Futura PT Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/FuturaCyrillicMedium.woff);
+}
+
+@font-face {
+  font-family: Gotham Regular;
+  src: url(../fonts/Gotham\ Regular.otf);
+}
+
+@font-face {
+  font-family: Cabin-Bold;
+  src: url(../fonts/Cabin-Bold.ttf);
+}
+
+* {
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #af1d31;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    height: 200vh;
+}
+
+body a {
+    color: white;
+}
+
+::selection {
+    background-color: #af3142;
+}
+
+:root {
+    --Cabin-Bold: Cabin-Bold;
+    --Gotham-Regular: 'Gotham Regular';
+    --Futura-PT-Medium: 'Futura PT Medium';    
+    --bg-color: black;
+    --primary-color: #cc142d;
+}
+
+.container {
+    position: relative;
+}
+
+.top-news-wrp {
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+}
+
+.section-left {
+    width: 100%;
+    max-width: 33%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: gray;
+}
+
+.section-right {
+    width: 100%;
+    max-width: 67%;
+    height: 100%;
+    float: right;
+    border-radius: 20px;
+    background-color: red;
+}
+
+.sl-article {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+}

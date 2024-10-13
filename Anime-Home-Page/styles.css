@@ -80,6 +80,8 @@ header {
     }
 }
 
+.container {padding-bottom: 1px;}
+
 .massage {display: none;}
 
 .nav {
@@ -637,6 +639,16 @@ header {
     scroll-snap-align: end;
 }
 
+.articles-episodes-wrp.scroll-snap-left {
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+}
+
+.articles-episodes-wrp.scroll-snap-right {
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: end;
+}
+
 .prev-button-article:hover {
     background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.75) 0%);
 }
@@ -650,7 +662,7 @@ header {
     background: transparent;
 }
 
-.articles-wrp {
+.articles-wrp, .articles-episodes-wrp {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -667,6 +679,10 @@ header {
 .articles-wrp::-webkit-scrollbar {
     display: none;
   }
+
+.articles-episodes-wrp::-webkit-scrollbar {
+    display: none;
+}
   
 .articles-wrp a {
     width: 250px;
@@ -675,7 +691,19 @@ header {
     transition: 0.2s all;
 }
 
+.articles-episodes-wrp a {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    transition: 0.2s all;
+}
+
 .articles-wrp a:hover .cover-article {
+    opacity: 0.6;
+    transition: 0.2s all;
+}
+
+.articles-episodes-wrp a:hover .cover-article-episode {
     opacity: 0.6;
     transition: 0.2s all;
 }
@@ -688,9 +716,23 @@ header {
     transition: 0.2s all;
 }
 
+.article-episodes {
+    position: relative;
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
 .cover-article {
     width: 250px;
     height: 360px;
+    border-radius: 5px;
+}
+
+.cover-article-episode {
+    width: 300px;
+    height: 165px;
     border-radius: 5px;
 }
 
@@ -722,6 +764,14 @@ header {
 }
 
 .cover-article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.cover-article-episode img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1437,7 +1487,7 @@ header {
         height: 25px;
     }
     
-    .articles-wrp {
+    .articles-wrp, .articles-episodes-wrp {
         margin-left: -75px;
         padding-left: 75px;
     }
@@ -1447,13 +1497,27 @@ header {
         margin-right: 16px;
     }
 
+    .articles-episodes-wrp a {
+        width: 255px;
+        margin-right: 16px;
+    }
+
     .article {
         width: 195px;
+    }
+
+    .article-episodes {
+        width: 255px;
     }
     
     .cover-article {
         width: 195px;
         height: 275px;
+    }
+
+    .cover-article-episode {
+        width: 255px;
+        height: 140px;
     }
 
     .title-serie-jp, .title-serie-en {
@@ -1676,7 +1740,7 @@ header {
         height: 21px;
     }
     
-    .articles-wrp {
+    .articles-wrp, .articles-episodes-wrp {
         margin-left: -60px;
         padding-left: 60px;
     }
@@ -1686,13 +1750,27 @@ header {
         margin-right: 16px;
     }
 
+    .articles-episodes-wrp a {
+        width: 235px;
+        margin-right: 16px;
+    }
+
     .article {
         width: 185px;
+    }
+
+    .article-episodes {
+        width: 235px;
     }
     
     .cover-article {
         width: 185px;
         height: 265px;
+    }
+
+    .cover-article-episode {
+        width: 235px;
+        height: 120px;
     }
 
     #next-button svg {
@@ -1990,7 +2068,7 @@ header {
         height: 21.5px;
     }
     
-    .articles-wrp {
+    .articles-wrp, .articles-episodes-wrp {
         margin-left: -17px;
         padding-left: 17px;
     }
@@ -2000,13 +2078,27 @@ header {
         margin-right: 12px;
     }
 
+    .articles-episodes-wrp a {
+        width: 210px;
+        margin-right: 12px;
+    }
+
     .article {
         width: 170px;
+    }
+
+    .article-episodes {
+        width: 210px;
     }
     
     .cover-article {
         width: 170px;
         height: 250px;
+    }
+
+    .cover-article-episode {
+        width: 210px;
+        height: 110px;
     }
 
     .title-serie-jp, .title-serie-en {
@@ -2381,13 +2473,26 @@ header {
         width: 155px;
     }
 
+    .articles-episodes-wrp a {
+        width: 190px;
+    }
+
     .article {
         width: 155px;
+    }
+
+    .article-episodes {
+        width: 190px;
     }
     
     .cover-article {
         width: 155px;
         height: 230px;
+    }
+
+    .cover-article-episode {
+        width: 190px;
+        height: 98px;
     }
 
     .title-serie-jp, .title-serie-en {

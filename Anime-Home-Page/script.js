@@ -298,7 +298,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 // - - - - - - - - -  BANNER 
 
 let items = document.querySelectorAll('.slider .list .item');
@@ -430,7 +429,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const windowWidth = window.innerWidth;
     if (windowWidth >= 900) {
-        const articleSections = document.querySelectorAll('.articles-wrp');
+        const articleSections = document.querySelectorAll('.articles-wrp, .articles-episodes-wrp');
 
         articleSections.forEach(function(container) {
             const prevButton = container.querySelector('.prev-button-article');
