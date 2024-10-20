@@ -708,6 +708,17 @@ header {
     transition: 0.2s all;
 }
 
+.btn-play {
+    display: none;
+    transition: opacity 0.2s ease;
+}
+
+.article-episodes:hover .btn-play {
+    display: block;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+
 .article {
     position: relative;
     width: 250px;
@@ -734,6 +745,18 @@ header {
     width: 300px;
     height: 165px;
     border-radius: 5px;
+}
+
+.btn-play {
+    position: absolute;
+    top: 39%;
+    left: 40.7%;
+    transform: translate(0, -50%);
+}
+
+.btn-play svg {
+    width: 50px;
+    height: 50px;
 }
 
 .category {
@@ -1292,7 +1315,7 @@ header {
         max-width: 450px;
     }
 
-    /* .articles-wrp a {
+    .articles-wrp a {
         width: 195px;
     }
 
@@ -1303,7 +1326,7 @@ header {
     .cover-article {
         width: 180px;
         height: 280px;
-    } */
+    }
     
     .info-serie-random {
         margin-left: 30px;
@@ -1497,27 +1520,13 @@ header {
         margin-right: 16px;
     }
 
-    .articles-episodes-wrp a {
-        width: 255px;
-        margin-right: 16px;
-    }
-
     .article {
         width: 195px;
-    }
-
-    .article-episodes {
-        width: 255px;
     }
     
     .cover-article {
         width: 195px;
         height: 275px;
-    }
-
-    .cover-article-episode {
-        width: 255px;
-        height: 140px;
     }
 
     .title-serie-jp, .title-serie-en {
@@ -1751,7 +1760,7 @@ header {
     }
 
     .articles-episodes-wrp a {
-        width: 235px;
+        width: 270px;
         margin-right: 16px;
     }
 
@@ -1760,7 +1769,7 @@ header {
     }
 
     .article-episodes {
-        width: 235px;
+        width: 270px;
     }
     
     .cover-article {
@@ -1769,8 +1778,8 @@ header {
     }
 
     .cover-article-episode {
-        width: 235px;
-        height: 120px;
+        width: 270px;
+        height: 155px;
     }
 
     #next-button svg {
@@ -2001,6 +2010,11 @@ header {
         z-index: 0;
     }
 
+    .btn-play svg {
+        width: 43px;
+        height: 43px;
+    }
+
     .slider .list .item img {
         width: 100%;
     }
@@ -2078,27 +2092,13 @@ header {
         margin-right: 12px;
     }
 
-    .articles-episodes-wrp a {
-        width: 210px;
-        margin-right: 12px;
-    }
-
     .article {
         width: 170px;
-    }
-
-    .article-episodes {
-        width: 210px;
     }
     
     .cover-article {
         width: 170px;
         height: 250px;
-    }
-
-    .cover-article-episode {
-        width: 210px;
-        height: 110px;
     }
 
     .title-serie-jp, .title-serie-en {
@@ -2473,26 +2473,27 @@ header {
         width: 155px;
     }
 
-    .articles-episodes-wrp a {
-        width: 190px;
-    }
-
     .article {
         width: 155px;
     }
 
-    .article-episodes {
-        width: 190px;
-    }
-    
     .cover-article {
         width: 155px;
         height: 230px;
     }
 
+    .articles-episodes-wrp a {
+        width: 235px;
+        margin-right: 16px;
+    }
+
+    .article-episodes {
+        width: 235px;
+    }
+
     .cover-article-episode {
-        width: 190px;
-        height: 98px;
+        width: 235px;
+        height: 130px;
     }
 
     .title-serie-jp, .title-serie-en {
