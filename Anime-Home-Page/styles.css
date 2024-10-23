@@ -619,12 +619,47 @@ header {
     z-index: 31;
 }
 
+.prev-button-article-episodes {
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.55) 0%);
+    width: 90px;
+    height: 255px;
+    padding-bottom: 80px;
+    left: 0;
+    bottom: 2px;
+    cursor: pointer;
+    z-index: 31;
+}
+
+.next-button-article-episodes {
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.55) 0%);
+    width: 60px;
+    height: 255px;
+    padding-top: 85px;
+    right: 0;
+    bottom: 2px;
+    rotate: 180deg;
+    cursor: pointer;
+    z-index: 31;
+}
+
 .prev-button-article svg {
     width: 25px;
     height: 25px;
 }
 
+.prev-button-article-episodes svg {
+    width: 25px;
+    height: 25px;
+}
+
 .next-button-article svg {
+    width: 25px;
+    height: 25px;
+}
+
+.next-button-article-episodes svg {
     width: 25px;
     height: 25px;
 }
@@ -658,7 +693,9 @@ header {
 }
 
 .prev-button-article.scrolling,
-.next-button-article.scrolling {
+.next-button-article.scrolling,
+.prev-button-article-episodes.scrolling,
+.next-button-article-episodes.scrolling {
     background: transparent;
 }
 
@@ -1315,7 +1352,7 @@ header {
         max-width: 450px;
     }
 
-    .articles-wrp a {
+    /* .articles-wrp a {
         width: 195px;
     }
 
@@ -1326,7 +1363,7 @@ header {
     .cover-article {
         width: 180px;
         height: 280px;
-    }
+    } */
     
     .info-serie-random {
         margin-left: 30px;
@@ -1548,6 +1585,18 @@ header {
         height: 357px;
         padding-top: 70px;
     }
+
+    .prev-button-article-episodes {
+        width: 75px;
+        height: 240px;
+        padding-bottom: 80px;
+    }
+    
+    .next-button-article-episodes {
+        width: 50px;
+        height: 240px;
+        padding-top: 70px;
+    }
     
     .prev-button-article svg {
         width: 22px;
@@ -1555,6 +1604,16 @@ header {
     }
     
     .next-button-article svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .prev-button-article-episodes svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .next-button-article-episodes svg {
         width: 22px;
         height: 22px;
     }
@@ -1818,6 +1877,29 @@ header {
         height: 19px;
     }
 
+    .prev-button-article-episodes {
+        width: 61px;
+        height: 235px;
+        padding-bottom: 70px;
+    }
+    
+    .next-button-article-episodes {
+        width: 43px;
+        height: 235px;
+        padding-top: 85px;
+
+    }
+    
+    .prev-button-article-episodes svg {
+        width: 19px;
+        height: 19px;
+    }
+    
+    .next-button-article-episodes svg {
+        width: 19px;
+        height: 19px;
+    }
+
     .st {
         max-width: 240px;
     }
@@ -2050,8 +2132,11 @@ header {
 
     #next-button, #prev-button, 
     .prev-button-article, .next-button-article,
+    .prev-button-article-episodes, .next-button-article-episodes,
     .prev-button-article svg, .next-button-article svg,
-    .prev-button-article.scrolling, .next-button-article.scrolling {
+    .prev-button-article-episodes svg, .next-button-article-episodes svg,
+    .prev-button-article.scrolling, .next-button-article.scrolling,
+    .prev-button-article-episodes.scrolling, .next-button-article-episodes.scrolling {
         display: none;
         background: transparent;
         user-select: none;

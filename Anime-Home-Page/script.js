@@ -432,8 +432,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const articleSections = document.querySelectorAll('.articles-wrp, .articles-episodes-wrp');
 
         articleSections.forEach(function(container) {
-            const prevButton = container.querySelector('.prev-button-article');
-            const nextButton = container.querySelector('.next-button-article');
+            const prevButton = container.querySelector('.prev-button-article, .prev-button-article-episodes');
+            const nextButton = container.querySelector('.next-button-article, .next-button-article-episodes');
             let scrollStep = 1080; // valoarea implicită de scroll
 
             // Ascundem butonul "Previous" doar dacă este prezent în container
