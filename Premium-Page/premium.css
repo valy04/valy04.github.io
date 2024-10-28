@@ -217,14 +217,38 @@ body a {
 .prezentation {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 400px;
     z-index: -1;
 }
 
 .prezentation img {
+    position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.text-prezentation {
+    position: absolute;
+    color: white;
+    font-family: var(--Cabin-Bold);
+    top: 165px;
+    left: 215px;
+    font-size: 37px;
+    max-width: 550px;
+}
+
+.compare-plans span {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    vertical-align: middle;
+}
+
+.compare-plans svg {
+    width: 21px;
+    height: 21px;
+    color: var(--primary-color);
 }
 
 @media screen and (max-width: 1370px) {
