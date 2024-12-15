@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime4life - Watch Anime for Free</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER - - - - HEADER - - - - HEADER - - - - HEADER - - - - HEADER -->
+
+  <header class="th">
+    <a href=""><ion-icon class="discord-logo" name="logo-discord"></ion-icon></a>
+    <div class="th-in">
+      <div class="search">
+        <button><a href="https://anime4life.ro/animes?submitsearch=&title="><ion-icon class="search-logo" name="search-outline" style="color: white; font-size: 18px;"></ion-icon></a></button>
+        <label><input class="th-input" -webkit-appearance: none; type="search" placeholder="Caută serie"></label>
+      </div>
+      <div class="logo">
+        <h1>
+          <a href="https://anime4life.ro/">
+            <svg viewBox="0 0 2543 682" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M145.02 104.555L205.078 127.26L197.998 150.697H294.678L284.668 222.963L231.934 223.207L315.674 447.572L250.977 469.789L165.039 240.297L69.0918 467.836L3.41797 447.816L98.1445 222.23L29.0527 221.986L34.4238 150.697H125.732L145.02 104.555ZM176.025 353.578L213.379 394.594L144.287 463.93L106.689 423.402L176.025 353.578ZM331.543 129.701H402.344L402.1 182.436L410.4 161.928C441.488 170.229 464.437 179.587 479.248 190.004C494.222 200.258 509.684 217.104 525.635 240.541L529.053 250.307L528.809 130.189H599.121V404.115C600.26 416.648 594.808 429.994 582.764 444.154C570.882 458.152 546.387 464.174 509.277 462.221V393.129C525.553 391.827 532.389 381.329 529.785 361.635C529.948 350.567 527.507 338.604 522.461 325.746C517.578 312.725 502.116 295.473 476.074 273.988C450.195 252.341 425.537 238.262 402.1 231.752V462.221H331.055L331.543 129.701ZM707.275 127.26L707.031 460.756H633.545L633.301 138.49L707.275 127.26ZM855.469 105.531L932.617 106.264V130.189H1015.38C1035.56 133.282 1046.71 144.512 1048.83 163.881L1048.34 385.316C1040.04 420.473 1028.4 442.852 1013.43 452.455C998.454 461.895 979.98 466.615 958.008 466.615V392.641C971.354 393.78 976.969 362.286 974.854 298.158V204.164H933.35V450.258L854.736 464.174L854.98 204.164H822.754V454.408L744.141 464.418L743.896 218.08L770.508 202.211H736.572L756.836 130.189H855.469V105.531ZM1082.28 130.922H1323.73V200.502L1184.33 200.746V239.564L1294.68 239.809L1286.87 306.947H1184.33V393.129L1327.88 376.527L1348.39 450.258L1093.99 482.24L1086.18 408.51L1114.99 403.627V307.436H1084.72L1091.55 244.691L1115.48 244.447L1115.23 216.127L1154.54 201.723L1082.28 201.967V130.922ZM1536.62 128.969H1594.73V341.371H1613.28V409.486L1593.51 409.242L1593.26 461H1540.53V410.707H1366.94V341.371L1536.62 128.969ZM1540.04 220.766L1446.29 341.371H1539.79L1540.04 220.766ZM1658.2 128.236H1730.71L1730.47 302.797L1771.97 303.285L1764.89 361.879L1732.42 362.123V383.852L1862.79 383.607L1855.22 460.268L1630.37 459.779L1641.36 384.34H1656.74V362.611H1632.81L1639.16 303.041L1657.71 302.797L1658.2 128.236ZM1968.02 127.26L1967.77 460.756H1894.29L1894.04 138.49L1968.02 127.26ZM2010.01 128.969H2227.54L2211.91 199.037H2099.12L2098.88 280.092L2107.67 246.889L2197.75 265.199L2184.08 337.709L2098.14 320.619L2098.39 451.967L2025.15 467.348V215.395L2060.55 199.037H1998.05L2010.01 128.969ZM2253.17 130.922H2494.63V200.502L2355.22 200.746V239.564L2465.58 239.809L2457.76 306.947H2355.22V393.129L2498.78 376.527L2519.29 450.258L2264.89 482.24L2257.08 408.51L2285.89 403.627V307.436H2255.62L2262.45 244.691L2286.38 244.447L2286.13 216.127L2325.44 201.723L2253.17 201.967V130.922Z" fill="white"></path>
+            <path d="M68.7026 546.22L32.8231 645H18.1587L59.4722 536.617H68.9259L68.7026 546.22ZM98.7758 645L62.8219 546.22L62.5986 536.617H72.0523L113.515 645H98.7758ZM96.9148 604.878V616.639H36.024V604.878H96.9148ZM211.401 536.617V645H196.96L142.397 561.405V645H128.03V536.617H142.397L197.184 620.435V536.617H211.401ZM252.268 536.617V645H237.902V536.617H252.268ZM282.937 536.617H296.857L332.364 624.976L367.797 536.617H381.791L337.724 645H326.856L282.937 536.617ZM278.396 536.617H290.679L292.688 602.719V645H278.396V536.617ZM373.975 536.617H386.258V645H371.966V602.719L373.975 536.617ZM480.348 633.313V645H422.956V633.313H480.348ZM425.859 536.617V645H411.492V536.617H425.859ZM472.755 583.216V594.903H422.956V583.216H472.755ZM479.604 536.617V548.379H422.956V536.617H479.604ZM581.808 536.617L536.624 654.305H524.788L570.047 536.617H581.808ZM641.285 536.617H655.205L690.712 624.976L726.145 536.617H740.139L696.071 645H685.203L641.285 536.617ZM636.744 536.617H649.026L651.036 602.719V645H636.744V536.617ZM732.323 536.617H744.605V645H730.313V602.719L732.323 536.617ZM811.302 546.22L775.423 645H760.759L802.072 536.617H811.526L811.302 546.22ZM841.376 645L805.422 546.22L805.198 536.617H814.652L856.114 645H841.376ZM839.515 604.878V616.639H778.624V604.878H839.515ZM954.001 536.617V645H939.56L884.997 561.405V645H870.63V536.617H884.997L939.783 620.435V536.617H954.001ZM1059.56 591.032V630.708C1058.22 632.693 1056.08 634.926 1053.15 637.407C1050.23 639.839 1046.18 641.973 1041.02 643.809C1035.91 645.596 1029.31 646.489 1021.22 646.489C1014.62 646.489 1008.54 645.347 1002.98 643.065C997.473 640.732 992.685 637.358 988.615 632.941C984.596 628.475 981.469 623.065 979.236 616.713C977.052 610.312 975.961 603.066 975.961 594.977V586.566C975.961 578.477 976.904 571.256 978.789 564.904C980.725 558.552 983.553 553.168 987.275 548.751C990.997 544.285 995.563 540.91 1000.97 538.627C1006.38 536.295 1012.58 535.129 1019.58 535.129C1027.87 535.129 1034.79 536.568 1040.35 539.446C1045.96 542.275 1050.32 546.195 1053.45 551.207C1056.63 556.22 1058.66 561.926 1059.56 568.328H1045.19C1044.54 564.408 1043.25 560.835 1041.32 557.609C1039.43 554.383 1036.73 551.803 1033.2 549.867C1029.68 547.882 1025.14 546.89 1019.58 546.89C1014.57 546.89 1010.23 547.808 1006.55 549.644C1002.88 551.48 999.855 554.11 997.473 557.535C995.091 560.959 993.305 565.103 992.114 569.966C990.972 574.829 990.402 580.313 990.402 586.417V594.977C990.402 601.23 991.121 606.813 992.56 611.726C994.049 616.639 996.158 620.832 998.888 624.306C1001.62 627.73 1004.87 630.336 1008.64 632.122C1012.46 633.909 1016.68 634.802 1021.29 634.802C1026.41 634.802 1030.55 634.38 1033.73 633.536C1036.9 632.643 1039.38 631.601 1041.17 630.41C1042.96 629.169 1044.32 628.003 1045.26 626.911V602.644H1020.18V591.032H1059.56ZM1123.5 546.22L1087.62 645H1072.95L1114.27 536.617H1123.72L1123.5 546.22ZM1153.57 645L1117.62 546.22L1117.39 536.617H1126.85L1168.31 645H1153.57ZM1151.71 604.878V616.639H1090.82V604.878H1151.71ZM1236.05 536.617V645H1221.68V536.617H1236.05ZM1345.55 536.617V645H1331.11L1276.54 561.405V645H1262.18V536.617H1276.54L1331.33 620.435V536.617H1345.55ZM1474.55 633.313V645H1420.36V633.313H1474.55ZM1423.19 536.617V645H1408.82V536.617H1423.19ZM1506.41 536.617V645H1492.04V536.617H1506.41ZM1537.08 536.617H1551L1586.51 624.976L1621.94 536.617H1635.93L1591.87 645H1581L1537.08 536.617ZM1532.54 536.617H1544.82L1546.83 602.719V645H1532.54V536.617ZM1628.12 536.617H1640.4V645H1626.11V602.719L1628.12 536.617ZM1704.27 594.307H1676.8L1676.65 582.769H1701.59C1705.71 582.769 1709.31 582.075 1712.38 580.685C1715.46 579.295 1717.84 577.31 1719.53 574.73C1721.27 572.1 1722.13 568.973 1722.13 565.351C1722.13 561.381 1721.36 558.155 1719.83 555.674C1718.34 553.143 1716.03 551.307 1712.9 550.165C1709.83 548.974 1705.91 548.379 1701.14 548.379H1680V645H1665.63V536.617H1701.14C1706.7 536.617 1711.66 537.188 1716.03 538.329C1720.4 539.421 1724.09 541.158 1727.12 543.54C1730.2 545.873 1732.53 548.85 1734.12 552.473C1735.71 556.095 1736.5 560.438 1736.5 565.5C1736.5 569.966 1735.36 574.01 1733.08 577.633C1730.79 581.206 1727.62 584.134 1723.55 586.417C1719.53 588.7 1714.81 590.164 1709.4 590.809L1704.27 594.307ZM1703.6 645H1671.14L1679.26 633.313H1703.6C1708.16 633.313 1712.03 632.519 1715.21 630.931C1718.44 629.343 1720.89 627.11 1722.58 624.232C1724.27 621.304 1725.11 617.855 1725.11 613.885C1725.11 609.865 1724.39 606.391 1722.95 603.463C1721.51 600.535 1719.26 598.277 1716.18 596.689C1713.1 595.101 1709.13 594.307 1704.27 594.307H1683.8L1683.95 582.769H1711.94L1714.99 586.938C1720.2 587.384 1724.61 588.873 1728.24 591.404C1731.86 593.885 1734.61 597.062 1736.5 600.932C1738.44 604.803 1739.4 609.071 1739.4 613.736C1739.4 620.485 1737.91 626.192 1734.94 630.857C1732.01 635.472 1727.87 638.995 1722.51 641.427C1717.15 643.809 1710.84 645 1703.6 645ZM1800.74 546.22L1764.86 645H1750.2L1791.51 536.617H1800.96L1800.74 546.22ZM1830.81 645L1794.86 546.22L1794.64 536.617H1804.09L1845.55 645H1830.81ZM1828.95 604.878V616.639H1768.06V604.878H1828.95ZM1897.88 536.617H1933.76C1941.9 536.617 1948.77 537.858 1954.38 540.339C1960.04 542.821 1964.33 546.493 1967.26 551.356C1970.24 556.17 1971.73 562.1 1971.73 569.147C1971.73 574.11 1970.71 578.65 1968.67 582.769C1966.69 586.839 1963.81 590.312 1960.04 593.191C1956.32 596.019 1951.85 598.128 1946.64 599.518L1942.62 601.081H1908.9L1908.75 589.394H1934.21C1939.37 589.394 1943.66 588.501 1947.09 586.715C1950.51 584.878 1953.09 582.422 1954.83 579.345C1956.57 576.268 1957.43 572.869 1957.43 569.147C1957.43 564.978 1956.62 561.331 1954.98 558.205C1953.34 555.078 1950.76 552.671 1947.24 550.984C1943.76 549.247 1939.27 548.379 1933.76 548.379H1912.25V645H1897.88V536.617ZM1961.23 645L1934.88 595.87L1949.84 595.796L1976.56 644.107V645H1961.23ZM2075.27 587.384V594.233C2075.27 602.371 2074.25 609.666 2072.22 616.118C2070.18 622.569 2067.26 628.053 2063.43 632.569C2059.61 637.085 2055.02 640.534 2049.66 642.916C2044.35 645.298 2038.4 646.489 2031.8 646.489C2025.4 646.489 2019.52 645.298 2014.16 642.916C2008.85 640.534 2004.23 637.085 2000.31 632.569C1996.44 628.053 1993.44 622.569 1991.3 616.118C1989.17 609.666 1988.1 602.371 1988.1 594.233V587.384C1988.1 579.246 1989.14 571.976 1991.23 565.574C1993.36 559.123 1996.37 553.639 2000.24 549.123C2004.11 544.557 2008.7 541.084 2014.01 538.702C2019.37 536.32 2025.25 535.129 2031.65 535.129C2038.25 535.129 2044.2 536.32 2049.51 538.702C2054.87 541.084 2059.46 544.557 2063.29 549.123C2067.16 553.639 2070.11 559.123 2072.14 565.574C2074.23 571.976 2075.27 579.246 2075.27 587.384ZM2061.05 594.233V587.236C2061.05 580.784 2060.38 575.077 2059.04 570.115C2057.75 565.152 2055.84 560.984 2053.31 557.609C2050.78 554.234 2047.68 551.679 2044.01 549.942C2040.38 548.205 2036.26 547.337 2031.65 547.337C2027.18 547.337 2023.14 548.205 2019.52 549.942C2015.94 551.679 2012.87 554.234 2010.29 557.609C2007.75 560.984 2005.79 565.152 2004.4 570.115C2003.02 575.077 2002.32 580.784 2002.32 587.236V594.233C2002.32 600.734 2003.02 606.49 2004.4 611.503C2005.79 616.465 2007.78 620.659 2010.36 624.083C2012.99 627.457 2016.09 630.013 2019.66 631.75C2023.29 633.487 2027.33 634.355 2031.8 634.355C2036.46 634.355 2040.61 633.487 2044.23 631.75C2047.85 630.013 2050.9 627.457 2053.39 624.083C2055.92 620.659 2057.83 616.465 2059.12 611.503C2060.41 606.49 2061.05 600.734 2061.05 594.233ZM2101.32 536.617H2115.24L2150.75 624.976L2186.18 536.617H2200.18L2156.11 645H2145.24L2101.32 536.617ZM2096.78 536.617H2109.07L2111.08 602.719V645H2096.78V536.617ZM2192.36 536.617H2204.64V645H2190.35V602.719L2192.36 536.617ZM2271.34 546.22L2235.46 645H2220.8L2262.11 536.617H2271.57L2271.34 546.22ZM2301.42 645L2265.46 546.22L2265.24 536.617H2274.69L2316.15 645H2301.42ZM2299.55 604.878V616.639H2238.66V604.878H2299.55ZM2414.04 536.617V645H2399.6L2345.04 561.405V645H2330.67V536.617H2345.04L2399.82 620.435V536.617H2414.04ZM2480.96 546.22L2445.08 645H2430.42L2471.73 536.617H2481.18L2480.96 546.22ZM2511.03 645L2475.08 546.22L2474.86 536.617H2484.31L2525.77 645H2511.03ZM2509.17 604.878V616.639H2448.28V604.878H2509.17Z" fill="white"></path>
+            </svg></a>
+        </h1>
+      </div>
+      <div class="th-menu">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=2S7DYKWP4MBEL"><ion-icon class="paypal-logo" name="logo-paypal"></ion-icon></a>
+        <a href="https://anime4life.ro/countdown/"><ion-icon class="time-logo" name="time"></ion-icon></a>
+        <a href="https://anime4life.ro/mnt/login"><ion-icon class="user-logo" name="person"></ion-icon></a>
+      </div>
+    </div>
+  </header>
+  <img class="banner" src="../html/resources/banner.png" alt="banner">
+  <nav class="nav">
+    <div class="nav-content">
+      <ul class="nav-ul">
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/">Acasă</a></li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/animes/">Listă Anime</a>
+            <ul class="dropdown-ul">
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Listă Anime Complete</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Listă Anime OnGoing</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Listă Anime În Traducere</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Listă Anime Dublate</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Listă Anime Abandonate</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Filme</a></li>
+            </ul>
+          </li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/animes/">Manga/Manhwa</a>
+            <ul class="dropdown-ul">
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manhwa Complete</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manga Complete</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manhwa Complete În Traducere</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manga Complete În Traducere</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manga Abandonate</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Manhwa Abandonate</a></li>
+            </ul>  
+          </li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/staff">Staff List</a></li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/propuneri-anime">Propuneri</a>
+            <ul class="dropdown-ul">
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Propuneri Anime</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Propuneri Manga / Manhwa</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Verifica Propuneri Anime</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Verifica Propuneri Manga / Manhwa</a></li>
+            </ul>
+          </li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/cerere-staff">Alătură-te Nouă!</a></li>
+        <li class="nav-li"><a class="nav-a" href="https://anime4life.ro/countdown">Informații Serii</a>
+            <ul class="dropdown-ul">
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Count Down</a></li>
+              <li class="dropdown-li"><a class="dropdown-a" href="#">Serii de Vară</a></li>
+            </ul>
+          </li>
+        <li class="nav-li"><a class="nav-a" href="#">Zona H</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="half-background"></div>
+  <div class="series">
+    <div class="box-series" title="HunterxHunter">
+      <a href="https://anime4life.ro/anime/hunter-x-hunter-(2011)/"><img class="box-img" src="../html/resources/HunterxHunter.jpg" alt="HunterxHunter">
+      <p><span class="box-span">Anime</span></p>
+      <div class="box-series-details">
+        <span class="box-name">HunterxHunter</span>
+        <span class="box-release">Postat pe: 04/08/2022 12:23</span>
+      </div>
+      <i class='fa-solid fa-circle-play'></i>
+    </div></a>
+    <div class="box-series" title="Jigokuraku">
+      <a href="https://anime4life.ro/anime/Jigokuraku/"><img class="box-img" src="../html/resources/Jigokuraku.jpg" alt="Jigokuraku">
+      <p><span class="box-span">Anime</span></p>
+      <div class="box-series-details">
+        <span class="box-name">Jigokuraku</span>
+        <span class="box-release">Postat pe: 25/09/2022 10:22</span>
+      </div>
+      <i class='fa-solid fa-circle-play'></i>
+    </div></a>
+    <div class="box-series" title="Beastars">
+      <a href="https://anime4life.ro/anime/beastars/"><img class="box-img" src="../html/resources/Beastars.jpg" alt="Beastars">
+      <p><span class="box-span">Anime</span></p>
+      <div class="box-series-details">
+        <span class="box-name">Beastars</span>
+        <span class="box-release">Postat pe: 03/01/2023 22:08</span>
+      </div>
+      <i class='fa-solid fa-circle-play'></i>
+    </div></a>
+    <div class="box-series" title="Isekai Shoukan wa Nidome desu">
+      <a href="https://anime4life.ro/anime/Isekai-Shoukan-wa-Nidome-desu/"><img class="box-img" src="../html/resources/Isekai Shoukan wa Nidome desu.jpg" alt="Isekai Shoukan wa Nidome desu">
+      <p><span class="box-span">Anime</span></p>
+      <div class="box-series-details">
+        <span class="box-name">Isekai Shoukan wa Nidome desu</span>
+        <span class="box-release">Postat pe: 10/01/2023 12:37</span>
+      </div>
+      <i class='fa-solid fa-circle-play'></i>
+    </div></a>
+  </div>
+
+  <!-- CONTAINER - - - - CONTAINER - - - - CONTAINER - - - - CONTAINER -->
+
+  <div class="container">
+    <div class="the-last-episodes">
+      <div class="the-last-episodes-h3">
+        <div id="border-top"></div>
+        <h3>ULTIMELE EPISOADE - PAGINA 1</h3>
+      </div>
+      <div class="contain-episodes">
+        <article class="article">
+          <div class="box-series" title="Aquarion Evol">
+            <a href="https://anime4life.ro/watch/Aquarion-Evol/episode-20-sub"><img class="box-img" src="../html/resources/Aquarion Evol.jpg" alt="Aquarion Evol">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Aquarion Evol Episodul 20</span>
+              <span class="box-release">Postat pe: 24/05/2023 23:33</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="My Home Hero">
+            <a href="https://anime4life.ro/watch/My-Home-Hero/episode-8-sub"><img class="box-img" src="../html/resources/My Home Hero.jpg" alt="My Home Hero">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">My Home Hero Episodul 8</span>
+              <span class="box-release">Postat pe: 23/05/2023 23:39</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Jijou wo Shiranai Tenkousei ga Guigui Kuru.">
+            <a href="https://anime4life.ro/watch/Jijou-wo-Shiranai-Tenkousei-ga-Guigui-Kuru/episode-7-sub"><img class="box-img" src="../html/resources/Jijou wo Shiranai Tenkousei ga Guigui Kuru..jpg" alt="JJijou wo Shiranai Tenkousei ga Guigui Kuru.">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Jijou wo Shiranai Tenkousei ga Guigui Kuru. Episodul 7</span>
+              <span class="box-release">Postat pe: 23/05/2023 23:32</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Isekai One Turn Kill Neesan: Ane Douhan no Isekai Seikatsu Hajimemashita">
+            <a href="https://anime4life.ro/watch/Isekai-One-Turn-Kill-Neesan-Ane-Douhan-no-Isekai-Seikatsu-Hajimemashita/episode-7-sub"><img class="box-img" src="../html/resources/Isekai One Turn Kill Neesan.jpg" alt="Isekai One Turn Kill Neesan: Ane Douhan no Isekai Seikatsu Hajimemashita">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Isekai One Turn Kill Neesan: Ane Douhan no Isekai Seikatsu Hajimemashita Episodul 7</span>
+              <span class="box-release">Postat pe: 23/05/2023 23:26</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Vinland Saga Season 2">
+            <a href="https://anime4life.ro/watch/vinland-saga-season-2/episode-20-sub"><img class="box-img" src="../html/resources/Vinland Saga Season 2.jpg" alt="Vinland Saga Season 2">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Vinland Saga Season 2 Episodul 20</span>
+              <span class="box-release">Postat pe: 23/05/2023 23:16</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Cool Doji Danshi">
+            <a href="https://anime4life.ro/watch/Cool-Doji-Danshi/episode-6-sub"><img class="box-img" src="../html/resources/Cool Doji Danshi.jpg" alt="Cool Doji Danshi">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Cool Doji Danshi Episodul 6</span>
+              <span class="box-release">Postat pe: 23/05/2023 18:54</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta">
+            <a href="https://anime4life.ro/watch/Isekai-de-Cheat-Skill-wo-Te-ni-Shita-Ore-wa-Genjitsu-Sekai-wo-mo-Musou-Suru-Level-Up-wa-Jinsei-wo-Kaeta/episode-8-sub"><img class="box-img" src="../html/resources/Isekai de Cheat Skill wo Te ni Shita.jpg" alt="Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta Episodul 8</span>
+              <span class="box-release">Postat pe: 23/05/2023 07:05</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Niehime to Kemono no Ou">
+            <a href="https://anime4life.ro/watch/Niehime-to-Kemono-no-Ou/episode-5-sub"><img class="box-img" src="../html/resources/Niehime to Kemono no Ou.jpg" alt="Niehime to Kemono no Ou">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Niehime to Kemono no Ou Episodul 5</span>
+              <span class="box-release">Postat pe: 25/09/2022 10:22</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Dr. Stone: New World">
+            <a href="https://anime4life.ro/watch/Dr-Stone-New-World/episode-7-sub"><img class="box-img" src="../html/resources/Dr. Stone New World.jpg" alt="Dr. Stone: New World">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Dr. Stone: New World Episodul 7</span>
+              <span class="box-release">Postat pe: 19/05/2023 15:55</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Kaminaki Sekai no Kamisama Katsudou">
+            <a href="https://anime4life.ro/watch/Kaminaki-Sekai-no-Kamisama-Katsudou/episode-7-sub"><img class="box-img" src="../html/resources/Kaminaki Sekai no Kamisama Katsudou.jpg" alt="Kaminaki Sekai no Kamisama Katsudou">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Kaminaki Sekai no Kamisama Katsudou Episodul 7</span>
+              <span class="box-release">Postat pe: 18/05/2023 22:41</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Majutsushi Orphen Hagure Tabi: Seiiki-hen">
+            <a href="https://anime4life.ro/watch/Majutsushi-Orphen-Hagure-Tabi-Seiiki-hen/episode-6-sub"><img class="box-img" src="../html/resources/Majutsushi Orphen Hagure Tabi Seiiki-hen.jpg" alt="Majutsushi Orphen Hagure Tabi: Seiiki-hen">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Majutsushi Orphen Hagure Tabi: Seiiki-hen Episodul 6</span>
+              <span class="box-release">Postat pe: 17/05/2023 22:37</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Boku no Kokoro no Yabai Yatsu">
+            <a href="https://anime4life.ro/watch/Boku-no-Kokoro-no-Yabai-Yatsu/episode-6-sub"><img class="box-img" src="../html/resources/Boku no Kokoro no Yabai Yatsu.jpg" alt="Boku no Kokoro no Yabai Yatsu">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Boku no Kokoro no Yabai Yatsu Episodul 6</span>
+              <span class="box-release">Postat pe: 17/05/2023 22:31</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Edomae Elf">
+            <a href="https://anime4life.ro/watch/Edomae-Elf/episode-7-sub"><img class="box-img" src="../html/resources/Edomae Elf.jpg" alt="Edomae Elf">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Edomae Elf - Episodul 7</span>
+              <span class="box-release">Postat pe: 22/05/2023 23:38</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Kimetsu no Yaiba: Katanakaji no Sato-hen">
+            <a href="https://anime4life.ro/watch/Kimetsu-no-Yaiba-Katanakaji-no-Sato-hen/episode-7-sub"><img class="box-img" src="../html/resources/Kimetsu no Yaiba Katanakaji no Sato-hen.jpg" alt="Kimetsu no Yaiba: Katanakaji no Sato-hen">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Kimetsu no Yaiba: Katanakaji no Sato-hen Episodul 7</span>
+              <span class="box-release">Postat pe: 21/05/2023 23:42</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Edens Zero 2nd Season">
+            <a href="https://anime4life.ro/watch/Edens-Zero-2nd-Season/episode-8-sub"><img class="box-img" src="../html/resources/Edens Zero 2nd Season.jpg" alt="Edens Zero 2nd Season">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Edens Zero 2nd Season Episodul 8</span>
+              <span class="box-release">Postat pe: 21/05.2023 23:08</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito">
+            <a href="https://anime4life.ro/watch/Tensei-Kizoku-no-Isekai-Boukenroku-Jichou-wo-Shiranai-Kamigami-no-Shito/episode-8-sub"><img class="box-img" src="../html/resources/Tensei Kizoku no Isekai Boukenroku.jpg" alt="Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito">
+            <p><span class="box-span">Anime</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Tensei Kizoku no Isekai Boukenroku: Jichou wo Shiranai Kamigami no Shito Episodul 8</span>
+              <span class="box-release">Postat pe: 25/09/2022 10:22</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+      </div>
+    </div>
+    <div class="section-countdown">
+      <h3>VREI SĂ ȘTII</h3>
+      <h2>CÂND APARE URMĂTORUL EPISOD,</h2>
+      <h4>FOLOSEȘTE COUNTDOWN-UL</h4>
+      <a href="https://anime4life.ro/countdown">Countdown</a>
+    </div>
+    <div class="the-last-chapters">
+      <div class="the-last-chapters-h3">
+        <div id="border-top"></div>
+        <h3>ULTIMELE CAPITOLE - PAGINA 1</h3>
+      </div>
+      <div class="contain-chapters">
+        <article class="article">
+          <div class="box-series" title="Omniscient Reader">
+            <a href="https://anime4life.ro/watch/omniscient-reader-(manhwa)/episode-25-sub"><img class="box-img" src="../html/resources/Omniscient Reader.jpg" alt="Omniscient Reader">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Omniscient Reader Episodul 25</span>
+              <span class="box-release">Postat pe: 26/05/2023 1:29</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Chainsaw Man Part 2">
+            <a href="https://anime4life.ro/watch/chainsaw-man-part-2-manga/episode-33-sub"><img class="box-img" src="../html/resources/Chainsaw Man Part 2 Manga.png" alt="Chainsaw Man Part 2 Manga">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Chainsaw Man Part 2 Manga Episodul 33</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:45</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="JoJo no Kimyou na Bouken Part 7">
+            <a href="https://anime4life.ro/watch/JoJo-no-Kimyou-na-Bouken-part-7-Steel-ball-run/episode-7-sub"><img class="box-img" src="../html/resources/JoJo no Kimyou na Bouken Part 7.jpg" alt="JoJo no Kimyou na Bouken Part 7">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">JoJo no Kimyou na Bouken Part 7 Episodul 7</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:43</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Vagabond">
+            <a href="https://anime4life.ro/watch/vagabond/episode-32-sub"><img class="box-img" src="../html/resources/Vagabond.jpg" alt="Vagabond">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Vagabond Episodul 32</span>
+              <span class="box-release">Postat pe: 25/05/2023 13:33</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="The evil witch’s survival plan">
+            <a href="https://anime4life.ro/watch/the-evil-witchs-survival-plan-(manhwa)/episode-55-sub"><img class="box-img" src="../html/resources/The evil witch’s survival plan.jpeg" alt="The evil witch’s survival plan">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">The evil witch’s survival plan (Manhwa) Episodul 55</span>
+              <span class="box-release">Postat pe: 25/05/2023 13:32</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="The Blood of Madam Giselle">
+            <a href="https://anime4life.ro/watch/the-blood-of-madam-giselle(manhwa)/episode-47-sub"><img class="box-img" src="../html/resources/The Blood of Madam Giselle(Manhwa).jpg" alt="The Blood of Madam Giselle">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">The Blood of Madam Giselle(Manhwa) Episodul 47</span>
+              <span class="box-release">Postat pe: 25/05/2023 13:30</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="The Beginning After the End (Manhwa)">
+            <a href="https://anime4life.ro/watch/the-beginning-after-the-end-(manhwa)/episode-88-sub"><img class="box-img" src="../html/resources/The Beginning After the End (Manhwa).jpg" alt="The Beginning After the End (Manhwa)">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">The Beginning After the End (Manhwa) Episodul 88</span>
+              <span class="box-release">Postat pe: 25/05/2023 13:28</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Kanojo no Tomodachi">
+            <a href="https://anime4life.ro/watch/Kanojo-no-Tomodachi/episode-10-sub"><img class="box-img" src="../html/resources/Kanojo no Tomodachi.jpg" alt="Kanojo no Tomodachi">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Kanojo no Tomodachi Episodul 10</span>
+              <span class="box-release">Postat pe: 25/05/2023 13:26</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Blue Lock">
+            <a href="https://anime4life.ro/watch/blue-lock-manga/episode-15-sub"><img class="box-img" src="../html/resources/Blue Lock (Manga).jpg" alt="Blue Lock">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Blue Lock (Manga) Episodul 15</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:22</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="JoJo no Kimyou na Bouken Part 9: The JoJoLands">
+            <a href="https://anime4life.ro/watch/JoJo-no-Kimyou-na-Bouken-Part-9-The-JoJoLands/episode-3-sub"><img class="box-img" src="../html/resources/JoJo no Kimyou na Bouken Part 9 The JoJoLands.png" alt="JoJo no Kimyou na Bouken Part 9: The JoJoLands">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">JoJo no Kimyou na Bouken Part 9: The JoJoLands Episodul 3</span>
+              <span class="box-release">Postat pe: 25/05/2023 12:27</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Kaijuu 8-gou">
+            <a href="https://anime4life.ro/watch/Kaijuu-8-gou/episode-18-sub"><img class="box-img" src="../html/resources/Kaijuu 8-gou.jpg" alt="Kaijuu 8-gou">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Kaijuu 8-gou Episodul 18</span>
+              <span class="box-release">Postat pe: 25/05/2023 10:06</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Ganbare Douki-chan (Manga)">
+            <a href="https://anime4life.ro/watch/ganbare-douki-chan-(manga)/episode-115-sub"><img class="box-img" src="../html/resources/Ganbare Douki-chan (Manga).webp" alt="Ganbare Douki-chan (Manga)">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Ganbare Douki-chan (Manga) Episodul 115</span>
+              <span class="box-release">Postat pe: 25/05/2023 09:13</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Chainsaw Man (Manga)">
+            <a href="https://anime4life.ro/watch/-chainsaw-man-(-manga)/episode-72-sub"><img class="box-img" src="../html/resources/Chainsaw Man ( Manga).jpg" alt="Chainsaw Man (Manga)">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Chainsaw Man (Manga) Episodul 72</span>
+              <span class="box-release">Postat pe: 25/05/2023 23:33</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="I GROW STRONGER BY EATING">
+            <a href="https://anime4life.ro/watch/i-grow-stronger-by-eating!-(manhwa)/episode-22-sub"><img class="box-img" src="../html/resources/I GROW STRONGER BY EATING.jpg" alt="I GROW STRONGER BY EATING">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">I GROW STRONGER BY EATING Episodul 22</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:07</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="Tokyo Revengers Manga">
+            <a href="https://anime4life.ro/watch/tokyo-revengers-manga/episode-9-sub"><img class="box-img" src="../html/resources/Tokyo Revengers Manga.jpg" alt="Tokyo Revengers Manga">
+            <p><span class="box-span">Manga</span></p>
+            <div class="box-series-details">
+              <span class="box-name">Tokyo Revengers Manga Episodul 9</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:05</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+        <article class="article">
+          <div class="box-series" title="The Dark Magician Transmigrates After 66666 Years (Manhwa)">
+            <a href="https://anime4life.ro/watch/the-dark-magician-transmigrates-after-66666-years-(manhwa)/episode-46-sub"><img class="box-img" src="../html/resources/The Dark Magician Transmigrates After 66666 Years (Manhwa).jpg" alt="The Dark Magician Transmigrates After 66666 Years (Manhwa)">
+            <p><span class="box-span">Manhwa</span></p>
+            <div class="box-series-details">
+              <span class="box-name">The Dark Magician Transmigrates After 66666 Years (Manhwa) Episodul 46</span>
+              <span class="box-release">Postat pe: 25/05/2023 00:09</span>
+            </div>
+            <i class='fa-solid fa-circle-play'></i>
+          </div></a>
+        </article>
+     </div>
+   </div>
+   <div class="buttons-page">
+    <a href=""><ion-icon name="chevron-back-outline"></ion-icon><ion-icon name="chevron-back-outline"></ion-icon> Prima</a>
+    <a href=""><ion-icon name="chevron-back-outline"></ion-icon> Anterioara</a>
+    <span>Pagina 1 din 35</span>
+    <a href="">Urmatoarea <ion-icon name="chevron-forward-outline"></ion-icon></a>
+    <a href="">Ultima <ion-icon name="chevron-forward-outline"></ion-icon></a>
+   </div>
+ <footer class="footer">
+    <div class="recent-comments">
+      <section class="footer-section">
+        <p><span class="footer-span">Comentarii recente</span></p>
+        <ul class="footer-ul">
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/YuutoOtosaka">YuutoOtosaka</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Dr-Stone-New-World/episode-8-sub">Dr. Stone: New World ep 8</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Dr-Stone-New-World/episode-8-sub#comment-629">
+                  <span>A fost un episod genial si se pare ca echipajul lui Ryuusui e foarte "calificat".</span> <br>
+                  <span>Din pacate n-au salvat pe cine trebuia :))) dar</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/danchi">danchi</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Isekai-One-Turn-Kill-Neesan-Ane-Douhan-no-Isekai-Seikatsu-Hajimemashita/episode-7-sub">Isekai One Turn Kill Neesan: Ane Douhan no Isekai Seikatsu Hajimemashita ep 7</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Isekai-One-Turn-Kill-Neesan-Ane-Douhan-no-Isekai-Seikatsu-Hajimemashita/episode-7-sub#comment-628">
+                  <span>cam am chef si eu de o sora mai mare</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/Mike1nator">Mike1nator</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Yamada-kun-to-Lv999-no-Koi-wo-Suru/episode-8-sub">Yamada-kun to Lv999 no Koi wo Suru ep 8</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Yamada-kun-to-Lv999-no-Koi-wo-Suru/episode-8-sub#comment-627">
+                  <span>Mulțumesc de episod, un final interesant.</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/YuutoOtosaka">YuutoOtosaka</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/My-Home-Hero/episode-7-sub">My Home Hero ep 7</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/My-Home-Hero/episode-7-sub#comment-626">
+                  <span>A fost un episod foarte bun sincer sa fiu si se pare ca situatia se complica si se inrautateste din ce in ce mai rau.</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/silviu000lei">silviu000lei</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/kage-no-jitsuryokusha-ni-naritakute!/episode-20-sub"> Kage no Jitsuryokusha ni Naritakute! ep 20</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/kage-no-jitsuryokusha-ni-naritakute!/episode-20-sub#comment-625">
+                  <span>O serie frumoasa si interesanta iar ce mai ramane de spus este: A4L is ATOMIC!!!!!</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/SynoGrum">SynoGrum</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Jigokuraku/episode-8-sub">Jigokuraku ep 8</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Jigokuraku/episode-8-sub#comment-624">
+                  <span>Mulțumesc pentru sprijin!</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/Mike1nator">Mike1nator</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Dr-Stone-New-World/episode-8-sub">Dr. Stone: New World ep 8</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Jigokuraku/episode-8-sub#comment-623">
+                  <span>Mulțumesc de episod</span>
+              </div>
+            </div>
+          </li>
+          <li class="footer-li">
+            <div class="comment">
+              <div class="head-comment">
+                <a href="https://anime4life.ro/fan/Mike1nator">Mike1nator</a>
+                <span>a comentat la</span>
+                <a href="https://anime4life.ro/watch/Dr-Stone-New-World/episode-8-sub">Isekai de Cheat Skill wo Te ni Shita Ore wa, Genjitsu Sekai wo mo Musou Suru: Level Up wa Jinsei wo Kaeta ep 8</a>
+                <span>:</span>
+              </div>
+              <div class="detail-comment">
+                <a href="https://anime4life.ro/watch/Isekai-de-Cheat-Skill-wo-Te-ni-Shita-Ore-wa-Genjitsu-Sekai-wo-mo-Musou-Suru-Level-Up-wa-Jinsei-wo-Kaeta/episode-8-sub#comment-622">
+                  <span>Mulțumesc de episod</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="list-a-z">
+      <span>Lista A - Z</span>
+      <div class="list">
+        <ul class="list-ul">
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/-">#</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/0">0-9</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/A">A</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/B">B</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/C">C</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/D">D</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/E">E</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/F">F</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/G">G</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/H">H</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/I">I</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/J">J</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/K">K</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/L">L</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/M">M</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/N">N</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/O">O</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/P">P</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/Q">Q</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/R">R</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/S">S</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/T">T</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/U">U</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/V">V</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/W">W</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/X">X</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/Y">Y</a></li>
+          <li class="list-li"><a class="list-a" href="https://anime4life.ro/az-list/Z">Z</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>Copyright © 2023 Anime4Life. All Rights Reserved <br>
+        Disclaimer: This site, Anime4Life, does not store any files on its server. All contents are provided by non-affiliated third parties.</span>
+    </div>
+ </footer>
+ </div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
