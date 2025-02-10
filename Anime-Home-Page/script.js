@@ -11,18 +11,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchBox = document.querySelector(".search-box");
 
     const backgrounds = [
-        '../resources/avatar.png',
-        '../resources/avatar2.png',
-        '../resources/avatar3.jpg',
-        '../resources/avatar4.png',
-        '../resources/avatar5.png',
-        '../resources/avatar6.jpg',
-        '../resources/avatar7.jpg',
-        '../resources/img_avatar.png',
-        '../resources/img_avatar2.png',
-        '../resources/img_avatar3.png',
-        '../resources/img_avatar4.png',
-        '../resources/img_avatar5.png',
+        './resources/avatar.png',
+        './resources/avatar2.png',
+        './resources/avatar3.jpg',
+        './resources/avatar4.png',
+        './resources/avatar5.png',
+        './resources/avatar6.jpg',
+        './resources/avatar7.jpg',
+        './resources/img_avatar.png',
+        './resources/img_avatar2.png',
+        './resources/img_avatar3.png',
+        './resources/img_avatar4.png',
+        './resources/img_avatar5.png',
         // Add more background image URLs as needed
     ];
 
